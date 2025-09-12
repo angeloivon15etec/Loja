@@ -21,22 +21,15 @@
       //echo "<td>".$produto['preco']."</td>";
       //echo "<td>".$produto['quantidade']."</td>";
       ?>
-        <form action="atualizar.php" method="POST">
+        <form action="atualizar.php?id=<?php echo $id; ?>" method="POST">
 
-            <div class="mb-3">
-                Nome:<input value=
-                "
-                <?php
-                   echo $produto['nome'];
-                ?>
-                "
-                 type="text" name="produto" class="form-control" placeholder="Digite o nome do produto">
+            <div class="mb-3">Nome:<input value="<?php echo $produto['nome'];?>" type="text" name="produtoNovo" class="form-control" placeholder="Digite o nome do produto">
             </div>
             <div class="mb-3">
-                Preço:<input type="text" name="preco" class="form-control" placeholder="Digite o preço do Produto">
+                Preço:<input type="text" name="precoNovo" class="form-control" placeholder="Digite o preço do Produto">
             </div>
             <div class="mb-3 form-check">
-                Quantidade:<input type="text" name="quantidade" class="form-control" placeholder="Digite a Quantidade">
+                Quantidade:<input type="text" name="quantidadeNovo" class="form-control" placeholder="Digite a Quantidade">
             </div>
             <button type="submit" class="btn btn-primary">Atualizar</button>
         </form>
