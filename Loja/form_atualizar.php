@@ -12,7 +12,7 @@
         <h2>ATUALIZAÇÃO DE PRODUTO</h2>
         <?php
      require 'conexao.php';
-     $sql = "SELECT * FROM produtos WHERE ID $id";
+     $sql = "SELECT * FROM produtos WHERE id=$id";
      $stmt = $pdo->query($sql);
     $produto = $stmt->fetch(PDO::FETCH_ASSOC); 
        //echo "<tr>";
@@ -21,7 +21,7 @@
       //echo "<td>".$produto['preco']."</td>";
       //echo "<td>".$produto['quantidade']."</td>";
       ?>
-        <form action="#" method="POST">
+        <form action="atualizar.php" method="POST">
 
             <div class="mb-3">
                 Nome:<input value=
